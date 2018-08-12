@@ -1,0 +1,83 @@
+{% extends 'headfoot.html' %}
+{% load static %}
+
+ {% block css %}
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+{% endblock css %}
+
+{% block material %}
+    <!-- home -->
+    <section id="home">
+
+        <div id="out" class="bg-parallax">
+            <div id="in">
+                <div id="home-content-box">
+
+                <div id="home-content-box-inner">
+
+                    <div class="vertical-heading">
+                        <h5>Latest News</h5>
+                        <h2>Latest<br>From <strong>Blog</strong></h2>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Repudiandae cum itaque explicabo nulla quaerat id commodi voluptatem.<br>Repudiandae cum itaque explicabo nulla quaerat id commodi voluptatem.</p>
+
+                </div>
+
+            </div>
+            </div>
+        </div>
+
+    </section>
+
+    <br><br>
+
+    <!-- all blogs -->
+    <section id="blogs">
+        <div class="container">
+            <div class="row">
+                {% for blog in blogs %}
+                <div class="col-md-4">
+                     <!-- Blog Post 01 -->
+
+                                <div class="blog-post">
+
+                                    <h4>{{blog.title}}</h4>
+                                    <p>{{blog.summary}}</p>
+                                    <a href="{% url 'blogview' blog.id %}">Read More ></a>
+
+                                    <div class="post-meta">
+                                        <div class="row">
+
+                                            <div class="col-md-6 col-sm-8 col-xs-5">
+                                                <h5>{{blog.language}}</h5>
+                                            </div>
+                                            <div class="col-md-6 col-sm-4 col-xs-7">
+                                                <h5 class="text-right">{{blog.pub_date_pretty}}</h5>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                </div>
+                {% endfor%}
+
+        </div>
+
+</section>
+
+
+        <br><br>
+
+    {% block js %}
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/headfoot.js' %}"></script>
+
+    {% endblock js %}
+
+{% endblock material %}

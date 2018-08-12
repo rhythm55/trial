@@ -1,0 +1,65 @@
+{% extends 'headfoot.html' %}
+{% load static %}
+ {% block css %}
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/plan.css' %}">
+
+{% endblock css %}
+
+{% block material %}
+
+<section id="heading">
+       <div class="container">
+           <div class="row">
+             <div class="col-md-6 text-center">
+                <div class="vertical-heading">
+                    <h5>Handy tips</h5>
+                    <h2>Get <strong>Interview</strong><br> Ready</h2>
+                </div>  
+             </div>
+             <div class="col-md-6 text-center">
+               <div class="itips">
+                <div class="row">
+                     <div class="col-md-2 col-sm-2">
+                        <div class="icon text-right">
+                            <i class="fa fa-crown"></i>
+                        </div>
+                      </div>
+
+                      <div class="col-md-10 col-sm-10 text">
+                        <h5>The Plan</h5>
+                        <h4>Correct Approach</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <div class="title-underline "></div>
+                      </div>
+                 </div>
+                 </div>
+              </div>
+                <div id="underline" class="col-md-12 ">
+                   
+                    <div class="title-underline "></div>
+                </div>
+                <div class="col-md-6 ">
+                    <img src="{% static 'img/plan.jpg' %}" width="500" height="500">
+                </div>
+                <div class="col-md-6 content">
+                   <h4>Practice Perfection</h4>
+                   <p>Practice till you get perfection in aptitude, group discussions and fluency in english.</p>
+                    <h4>Your Resume</h4>
+                    <p>Make sure to make a impressive resume highlighting all your qualities and achivements. Resmue length should not be more than 2 pages.</p>
+                    <h4>Job Description</h4>
+                    <p>go through the description of job you are applying for and do have a  sound knowledge about future prospectives of job position and as well as the company.</p>
+                    <h4>Look sharp be Sharp</h4>
+                    <p>have a proper dressing and confidence in yourself from the very first look. always keep a smile in the interview reflecting a positivity on the interviewe. Be antentive in the interview and mold the interview more towards your projects and achivements</p>
+                </div>
+            </div>  
+       </div>
+   </section>
+      
+ {% block js %}
+    <!-- Custom JS -->
+    <script src="{% static 'js/headfoot.js' %}"></script>
+    {% endblock js %}
+
+{% endblock material %}

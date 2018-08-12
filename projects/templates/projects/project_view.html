@@ -1,0 +1,108 @@
+{% extends 'headfoot.html' %}
+{% load static %}
+
+ {% block css %}
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
+
+{% endblock css %}
+
+{% block material %}
+    
+    <!-- projects -->
+    <section id="portfolio">
+
+        <div class="content-box-md">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-12 wow slideInLeft">
+
+                        <div class="horizontal-heading text-center">
+                            <h2><strong>Projects</strong></h2>
+                            <div class="title-underline"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-12">
+
+                        <!-- Portfolio Items Filters -->
+                        <div id="isotope-filters" class="text-center">
+
+                            <button class="btn active" data-filter="*"><span>All</span></button>
+                            <button class="btn" data-filter=".Python"><span>Python</span></button>
+                            <button class="btn" data-filter=".Front End"><span>Front End</span></button>
+                            <button class="btn" data-filter=".Django"><span>Django</span></button>
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Portfolio Items Wrapper -->
+            <section id="portfolio-wrapper" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+
+                <div class="container-fluid">
+
+                    <div class="row no-gutters">
+
+                        <div id="isotope-container">
+
+
+                            {% for project in projects %}
+                            <div class="col-md-3 col-sm-6 col-xs-12 {{project.language}}">
+
+                                <!-- Portfolio Item 01 -->
+                                <div class="portfolio-item">
+
+                                    <a href="{% url 'project_steps' project.id  %}" title={{project.project_name}}>
+                                        <img src="{% static 'img/project/python.png' %}" class="img-responsive" alt="portfolio 01">
+
+                                        <div class="portfolio-item-overlay">
+                                            <div class="portfolio-item-details text-center">
+
+                                                <!-- Item Header -->
+                                                <h3>{{project.language}}</h3>
+
+                                                <!-- Item Strips -->
+                                                <span></span>
+
+                                                <!-- Item Description -->
+                                                <p>{{ project.overlay_dis }}</p>
+
+                                            </div>
+
+                                        </div>
+                                    </a>
+
+                                </div>
+
+                            </div>
+                            {% endfor %}
+                        
+                           </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </section>
+
+    {% block js %}
+    <!-- Custom JS -->
+    <script src="{% static 'js/project.js' %}"></script>
+    {% endblock js %}
+
+{% endblock material %}

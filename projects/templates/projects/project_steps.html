@@ -1,0 +1,79 @@
+{% extends 'headfoot.html' %}
+{% load static %}
+
+ {% block css %}
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/projectstep.css' %}">
+
+{% endblock css %}
+
+{% block material %}
+
+{% load index %}
+
+    <!-- project -->
+    <section id="project">
+        <div class="content-box-">
+            <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="horizontal-heading text-center">
+                        <h2><strong>Project</strong></h2>
+                        <div class="title-underline"></div>
+                    </div>
+                </div>
+                <div class="col-md-12 project-name text-center">
+                    <div class="title-underline"></div>
+                    {% for project in projects %}
+                        {% ifequal project.id projectid|inte %}
+                            <h2>{{project.project_name}}</h2>
+
+                    <div class="title-underline"></div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="{% static 'img/project/python.png' %}" class="project-img">
+                </div>
+                <div class="col-md-8">
+                            <p>Description:<br>{{project.description}}</p>
+                        {%endifequal%}
+                    {%endfor%}
+                </div>
+                <div class=" col-md-12 text-center">
+                    <div class="title-underline black-line"></div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <table width="200" height="400">
+                        <th class="text-center">Steps</th>
+                        {%for step in steps%}
+                            {%ifequal step.project_id projectid|inte %}
+                                <tr><td><a href="{% url 'project_steps' projectid=projectid stepno=step.step_no %}">Step-{{step.step_no}}</a></td></tr>
+                            {%endifequal%}
+                        {%endfor%}
+                    </table>
+                </div>
+                <div class="col-md-8">
+
+                        {%for step in steps%}
+                            {%ifequal step.project_id projectid|inte %}
+                                {%ifequal step.step_no stepno|inte%}
+                                    <p><span class="step-heading">Step {{step.step_no}}:</span>
+                                    <br>
+                                    {{step.step_dis}}
+                                    </p>
+                                {%endifequal%}
+                            {%endifequal%}
+                        {%endfor%}
+
+                    <br><a>next </a><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+{% block js %}
+    <!-- Custom JS -->
+    <script src="{% static 'js/project.js' %}"></script>
+    {% endblock js %}
+
+{% endblock material %}

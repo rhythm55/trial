@@ -1,0 +1,1037 @@
+/* =========================================
+    smokey white: #D3D6DA
+:	 bluish :#0A2C37
+    greenish blue: #062F31
+	blue green: #26323D
+	smokey gray :#99A2A2
+    bright orange: #ff6600
+============================================ */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: #212226;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+section{
+    background: #fff;
+    overflow: hidden;
+}
+
+/* =========================================
+                Content Boxes
+============================================ */
+
+.content-box-lg {
+    padding: 10px 0 0 0;
+}
+
+.content-box-md {
+    padding: 30px 0;
+}
+
+.content-box-sm {
+    padding: 70px 0;
+}
+
+
+/* =========================================
+                Preloader
+============================================ */
+
+#preloader {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+#status {
+    background-image: url("../img/preloader/preloader.gif");
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -35px;
+    margin-left: -35px;
+}
+
+/*====================================================
+                       NAVIGATION
+======================================================*/
+.navbar {
+    padding: 35px 0 20px 0;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+
+.site-nav-wrapper {
+    padding: 0 85px;
+}
+
+.navbar-brand {
+    padding: 13px 15px;
+}
+
+ul.navbar-nav>li>a {
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+ul.navbar-nav>li>a:hover,
+ul.navbar-nav>li>a:focus {
+    background: none;
+    color: #f4c613;
+}
+
+
+/* black Navigation */
+
+.white-nav-top {
+    background: rgba(0,0,0,0.7);
+    padding: 10px 0;
+    -webkit-box-shadow: 0 8px 6px -9px #999;
+    box-shadow: 0 8px 6px -9px #999;
+    z-index: 2;
+}
+
+.white-nav-top ul.navbar-nav>li>a {
+    color: #fff;
+}
+
+.white-nav-top ul.navbar-nav>li>a:hover,
+.white-nav-top ul.navbar-nav>li>a:focus {
+    color: rgb(250,145,0);
+}
+
+
+/* Scroll spy active state */
+
+.white-nav-top ul.navbar-nav>li.active>a {
+    color: rgb(250,145,0);
+    font-weight: 500;
+}
+
+
+
+.navbar-toggle {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid #fff;
+    border-radius: 0;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+
+
+/* =========================================
+                Buttons
+============================================ */
+
+.btn-general {
+    font-family: 'Raleway', sans-serif;
+    border-radius: 28px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 0 6px;
+    padding: 12px 46px 12px 46px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.btn-home {
+    margin-top: 20px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.btn-home:hover,
+.btn-home:focus {
+    color: black;
+    background-color: rgb(250,145,0);
+    border: 1px solid #99A2A2;
+}
+
+.btn-yellow {
+    color: #fff;
+    border: 1px solid rgb(250,145,0);
+    background-color: rgb(250,145,0);
+}
+
+.btn-yellow:hover,
+.btn-yellow:focus {
+    color: #fff;
+    background-color: #212226;
+    border: 1px solid #212226;
+}
+
+.btn-white {
+    color: #212226;
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+
+.btn-white:hover,
+.btn-white:focus {
+    color: #fff;
+    background-color: #212226;
+    border: 1px solid #212226;
+}
+
+.btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 3px 15px;
+    border-radius: 4px;
+    font-size: 22px;
+    display: none;
+}
+
+/*====================================================
+                        PARALLAX (Generic)
+======================================================*/
+
+.bg-parallax {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* =========================================
+        Vertical/Horizontal Headings
+============================================ */
+
+.vertical-heading h5 {
+    color: rgb(250,145,0);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    word-spacing: 9px;
+    display: inline-block;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: relative;
+    top: 60px;
+    left: -53px;
+}
+
+.vertical-heading h2 {
+    margin: 0 0 0 35px;
+}
+
+.horizontal-heading h2,
+.vertical-heading h2 {
+    font-size: 42px;
+    font-weight: 100;
+    line-height: 45px;
+}
+
+.vertical-heading,
+.horizontal-heading {
+    margin-bottom: 0px;
+}
+
+.horizontal-heading h5 {
+    font-size: 16px;
+    color: rgb(250,145,0);
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.horizontal-heading h2 {
+    margin: 0;
+}
+
+.title-underline {
+    width: 40px;
+    height: 3px;
+    background-color: rgb(250,145,0);
+    margin: 10px auto 30px auto;
+}
+
+/*====================================================
+                        HOME
+======================================================*/
+
+#home {
+    height: 100%;
+}
+
+#home-cover {
+    height: 100%;
+    width: 100%;
+
+}
+
+
+#home-content-box {
+    width: 100%;
+    height: 700px;
+    display: table;
+}
+
+#home-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#home-content-box-inner h3 span{
+    color: rgb(250,145,0);
+}
+
+#home-content-box-inner h1 a{
+    color: #fff;
+    font-size: 27px;
+    font-weight: 100;
+    margin: 8px 0 30px 0;
+    border-bottom: 1px solid rgb(250,145,0);
+}
+
+
+#home-heading h3 {
+    color: #fff;
+    font-size: 55px;
+    font-weight: 700;
+    margin: 20px 0 20px 0;
+}
+
+#home-heading h1 {
+    color: #fff;
+    font-size: 65px;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin: 0;
+    display: inline-block;
+}
+
+#home-heading h1 span {
+    color: rgb(250,145,0);
+}
+
+#home-text p {
+
+}
+
+/* =========================================
+        codeflow
+============================================ */
+#codeflow{
+    background-color: #fff;
+}
+
+.steps a{
+    color: black;
+}
+
+.steps-img{
+    width: 100%;
+    height: 100%;
+    float: left;
+    margin: 0;
+}
+
+.steps .icon {
+    font-size: 28px;
+    margin: 0;
+    -webkit-transition: all 400ms linear;
+    transition: all 400ms linear;
+}
+
+.steps:hover .icon {
+    color: #DB6C00;
+    border-radius: 1px solid black;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+}
+
+.steps h5 {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgb(250,145,0);
+    margin: 0 0 6px 0;
+}
+
+.steps:hover h5 {
+    color: #212226;
+}
+
+.steps h4 {
+    font-size: 20px;
+    margin: 0 0 8px 0;
+}
+
+.steps p {
+    line-height: normal;
+}
+
+
+
+/* =========================================
+                Statement
+============================================ */
+.content-box-statement{
+    padding: 120px 0;
+}
+#statement {
+    background: url("../img/kevin-364843-unsplash.jpg") no-repeat fixed center;
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+
+#tech-statement h3 {
+    color: #fff;
+    font-size: 28px;
+    line-height: 45px;
+}
+
+
+
+/* =========================================
+                Pricing
+============================================ */
+
+.pricing-table {
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 21px 21px;
+    -webkit-transition: all 400ms linear;
+    transition: all 400ms linear;
+}
+
+.pricing-table:hover {
+    background: rgb(250,145,0);
+}
+
+.pricing-table .type h4 {
+    color: rgb(250,145,0);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.pricing-table .price {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 24px 0;
+}
+
+.pricing-table .price h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 42px;
+    font-weight: 100;
+    margin: 0 0 0 24px;
+    position: relative;
+}
+
+.pricing-table .price h2 span {
+    font-family: "Raleway", sans-serif;
+}
+
+.pricing-table .price h2 span.dollar {
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+    left: -20px;
+    top: 5px;
+}
+
+.pricing-table .price h2 span.month {
+    font-size: 11px;
+    font-weight: 400;
+    position: absolute;
+    left: 5px;
+    bottom: -12px;
+}
+
+.pricing-table .price p {
+    line-height: normal;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+}
+
+.pricing-table ul.package {
+    list-style: none;
+    padding: 20px 0 0 0;
+}
+
+.pricing-table ul.package li {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.pricing-table ul.package li i {
+    width: 24px;
+}
+
+.pricing-table .btn-yellow,
+.pricing-table.black .btn-white {
+    width: 96%;
+}
+
+
+.pricing-table:hover .btn-yellow {
+    background: #fff;
+    color: #212226;
+    border: 1px solid #fff;
+}
+
+
+
+
+/* Black Pricing Table */
+
+.pricing-table.black {
+
+    background: #212226;
+    color: #fff;
+}
+
+.pricing-table.black .type h4 {
+    color: #fff;
+}
+
+.pricing-table.black:hover {
+    background: rgb(250,145,0);
+
+}
+.pricing-table.black:hover p,
+.pricing-table.black:hover h4,
+.pricing-table.black:hover li,
+ .pricing-table.black:hover ul.package
+{
+   color: black;
+    font-weight: 500;
+}
+
+
+/* =========================================
+                Portfolio
+============================================ */
+
+#portfolio {
+    margin-top: 0;
+    padding-bottom: 30px;
+}
+
+#portfolio .vertical-heading {
+    margin-bottom: 10px;
+}
+
+.row.no-gutters [class*=col-] {
+    padding: 0;
+}
+
+.portfolio-item {
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Filters CSS */
+
+#isotope-filters {
+    padding: 5px 25px 10px 0;
+}
+
+#isotope-filters button {
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-right: 35px;
+    outline: 0;
+}
+
+#isotope-filters button span {
+    display: block;
+    padding-bottom: 5px;
+    -webkit-transition: border-color .4s ease-in-out;
+    transition: border-color .4s ease-in-out;
+}
+
+#isotope-filters button.active span {
+    color: rgb(250,145,0);
+    border-bottom: 3px solid rgb(250,145,0);
+}
+
+
+/* Zoom Effect */
+
+.portfolio-item img {
+    width: 400px;
+    height: 300px;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease;
+
+}
+
+.portfolio-item:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+/* Overlay Effect */
+
+.portfolio-item-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(14, 14, 17, 0.9);
+    cursor: -webkit-zoom-in;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+/* Item Details Effect */
+
+.portfolio-item-details {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.portfolio-item-details h3 {
+    color: rgb(250,145,0);
+    text-transform: uppercase;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translateY(-20%);
+    transform: translateY(-20%);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.portfolio-item-details span {
+    display: inline-block;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    height: 6px;
+    width: 30px;
+    margin: 11px auto 5px auto;
+}
+
+.portfolio-item-details p {
+    font-size: 17px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translateY(20%);
+    transform: translateY(20%);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
+/* Show Overlay on mouse over */
+
+.portfolio-item:hover .portfolio-item-details h3 {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.portfolio-item:hover .portfolio-item-details p {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.portfolio-item:hover .portfolio-item-overlay {
+    opacity: 1;
+}
+
+
+/* =========================================
+            material
+============================================ */
+
+#material {
+    background-color: #f4f4f4;
+}
+
+#material a{
+    color: black;
+    text-decoration: none;
+}s
+
+#about-02 {
+    background-color: #f4f4f4;
+}
+
+.about-item {
+    background-color: #fff;
+    padding: 80px 30px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.about-item i {
+    font-size: 42px;
+    margin: 0;
+}
+
+.about-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-item hr {
+    width: 45px;
+    height: 3px;
+    background-color: rgb(250,145,0);
+    margin: 0 auto;
+    border: none;
+}
+
+.about-item p {
+    margin-top: 20px;
+}
+
+
+/* Hover state */
+
+.about-item:hover {
+    background-color: rgb(250,145,0);
+}
+
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover p {
+    color: #fff;
+}
+
+.about-item:hover hr {
+    background-color: #fff;
+}
+
+.about-item:hover .move {
+    color: #fff;
+    -webkit-transform: translateY(-20px);transform: translateY(-20px);
+}
+
+
+/* Smooth transition */
+
+.about-item,
+.about-item i,
+.about-item hr {
+    -webkit-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+}
+.about-item h3,
+.about-item p {
+   -webkit-transition: all 400ms linear;
+    transition: all 400ms linear;
+}
+
+/* =========================================
+                testimonials
+============================================ */
+
+.content-box-testi{
+    margin-right: 40px;
+}
+
+#testimonials {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+#testimonials .vertical-heading {
+    padding: 80px 0;
+    margin-bottom: 50px;
+}
+
+#testimonial-slider {
+    margin-right: 80px;
+    background: rgb(250,145,0);
+    top:30px;
+}
+
+.testimonial {
+    padding: 20px 45px 0 45px;
+    color: black;
+    font-weight: 400;
+}
+
+.testimonial .row {
+    margin-bottom: 25px;
+}
+
+.testimonial h3 {
+    font-size: 32px;
+    line-height: 35px;
+}
+
+.testimonial stars {
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+}
+
+.testimonial p {
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.author .author-name-des {
+    width: 106px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.author .author-name-des p {
+    margin: 0;
+}
+
+/* =========================================
+                Blog
+============================================ */
+
+#blog {
+    background: #f4f4f4;
+    padding: 40px 0 60px 0;
+}
+
+#blog-left p {
+    margin: 25px 0;
+}
+
+#blog-btn a {
+    margin: 0;
+}
+
+.blog-post {
+    background: #fff;
+    padding: 35px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.blog-post h4 {
+    line-height: 40px;
+    margin: 0;
+}
+
+.blog-post>p {
+    line-height: 24px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.blog-post a {
+    display: inline-block;
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    color: rgb(250,145,0);
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    -webkit-transition: all 400ms linear;
+    transition: all 400ms linear;
+}
+
+.blog-post a:hover {
+    color: #212226;
+}
+
+.blog-post .post-meta {
+    border-top: 1px solid #e0e0e0;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+
+.blog-post .post-meta p {
+    font-size: 11px;
+    font-family: "Raleway", sans-serif;
+    line-height: 24px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* =========================================
+                itips
+============================================ */
+#about{
+    width: 100%;
+    height: 95%;
+}
+
+.itips a{
+color:black;
+}
+
+.itips .icon {
+    font-size: 28px;
+    margin: 20px 0 0 0;
+    -webkit-transition: all 400ms linear;
+    transition: all 400ms linear;
+}
+
+.itips:hover .icon {
+    color: #DB6C00;
+    border-radius: 1px solid black;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+}
+
+.itips h5 {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgb(250,145,0);
+    margin: 17px 0 6px 0;
+}
+
+.itips:hover h5 {
+    color: #212226;
+}
+
+.itips h4 {
+    font-size: 20px;
+    margin: 0 0 5px 0;
+}
+
+.itips p {
+    line-height: normal;
+}
+
+
+#about-bg-diagonal {
+    width: 65%;
+    height: 400px;
+    float: right;
+    background-image: url("../img/interview/interview3.jpg");
+    background-size: cover;
+    border-left: 200px solid #fff;
+    border-top: 700px solid transparent;
+}
+
+#about-content-box {
+    float: left;
+    height: 500px;
+}
+
+#about-content-box-outer {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+#about-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#about .steps{
+    padding-top: 20px;
+}
+
+/* =========================================
+                Footer
+============================================ */
+
+footer {
+    background: #212226;
+    padding: 30px;
+}
+
+footer p {
+    color: #fff;
+    line-height: 20px;
+    margin: 0;
+}
+
+footer p span {
+    color: rgb(250,145,0);
+}
+/* =========================================
+               overlay
+============================================ */
+#try{
+    width: 100%;
+    height: 100%;
+}
+#out{
+    background: url("../img/home4.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#in{
+     width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+    padding-top: 10px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* =========================================
+               overlay
+============================================ */
+.quote{
+    background: url("../img/kevin-392517-unsplash.jpg")
+}

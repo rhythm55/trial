@@ -1,0 +1,155 @@
+{% extends 'headfoot.html' %}
+{% load static %}
+ {% block css %}
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/headfoot.css' %}">
+
+{% endblock css %}
+
+{% block material %}
+
+{% load index %}
+    <!-- intromat -->
+    <section id="intromet">
+        <div class="content-box-md">
+            <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="horizontal-heading text-center">
+                        <h2><strong class="plang">{{name}}</strong><br><strong>FAQs</strong></h2>
+                        <div class="title-underline text-center"></div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="container primary-nav">
+                        <nav class="navbar navbar-inverse" role="navigation">
+                          <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              </button>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                              <ul class="nav navbar-nav">
+                                  {% for lan in languages%}
+                                    {%ifequal lan.language_name name%}
+                                        {% for topic in topics %}
+                                            {% ifequal topic.language_name_id lan.id %}
+                                                <li class="dropdown">
+                                                    <a  class="dropdown-toggle" data-toggle="dropdown">{{topic.topic_name}}<b class="caret"></b></a>
+
+                                                    <ul class="dropdown-menu">
+                                                    {% for subtopic in subtopics %}
+                                                        {% ifequal subtopic.topic_name_id topic.id %}
+                                                                        <li><a href="{% url 'faqview' lan.language_name subtopic.subtopic_no%}">{{subtopic.subtopic_name}}</a></li>
+                                                        {% endifequal %}
+                                                    {% endfor %}
+                                                    </ul>
+                                                </li>
+                                            {% endifequal %}
+                                        {% endfor %}
+                                    {%endifequal%}
+                                  {% endfor %}
+
+                              </ul>
+                              <form class="navbar-form navbar-left" role="search">
+                                <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="btn btn-default">Go</button>
+                              </form>
+                              <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language<b class="caret"></b></a>
+                                  <ul class="dropdown-menu">
+                                      {% for language in languages %}
+                                        <li><a href="{% url 'faqview' language.language_name %}">{{language}}</a></li>
+                                      {% endfor %}
+                                  </ul>
+                                </li>
+                              </ul>
+
+                           </div>
+                          </div>
+                        </nav>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- material -->
+    <div id="material">
+        <div class="content-box-md">
+            <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center title">
+                 {% for lan in languages%}
+                    {%ifequal lan.language_name name%}
+                        {% for topic in topics %}
+                            {%ifequal topic.language_name_id lan.id%}
+                                {% for subtopic in subtopics %}
+                                    {%ifequal subtopic.topic_name_id topic.id%}
+                                        {% ifequal subtopic.subtopic_no pk|inte %}
+                                            <h3>{{topic.topic_name}}</h3>
+                                                <div class="line"></div>
+                                            </div>
+                                            <div class="col-md-2 Sub-titles">
+                                                <table width="100" height="300">
+                                                    <th>{{subtopic.subtopic_name}}</th>
+                                                    {% for question in questions %}
+                                                        {% ifequal subtopic.id question.subtopic_name_id %}
+                                                            <tr><td><a href="{% url 'faqview' name subtopic.subtopic_no question.question_no %}">{{question.question_name}}</a></td></tr>
+                                                        {% endifequal %}
+                                                    {% endfor %}
+                                                    <!--        {% if pk < subtopics|length%}
+                                                    {% for sstopic in sstopics %}
+                                                        {% ifequal subtopic.id sstopic.subtopic_name_id %}
+                                                            {% with id as subtopic.id|var  %}
+                                                                <tr><td><a href="">next </a><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></td></tr>
+                                                           {% endwith %}
+                                                    {% endifequal %}
+                                                    {% endfor %}
+                                                     {%endif%} -->
+                                                </table>
+                                            </div>
+                                            <div id="content" class="col-md-10 text">
+                                               {% for question in questions %}
+                                                    {% ifequal subtopic.id question.subtopic_name_id %}
+                                                {% ifequal question.question_no spk|inte %}
+                                                       <h5>Level: {{question.level}}</h5>
+                                                      <h3>Q: {{question.question_name}}</h3>
+                                                       <p>A: {{question.answer}}</p>
+                                                {% endifequal %}
+                                                {% endifequal %}
+                                               {% endfor %}
+
+                                            </div>
+                                        {% endifequal %}
+                                    {% endifequal %}
+                                {% endfor %}
+                            {% endifequal %}
+                        {% endfor %}
+                    {% endifequal %}
+                 {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    {% block js %}
+    <!-- Custom JS -->
+    <script src="{% static 'js/headfoot.js' %}"></script>
+    {% endblock js %}
+
+{% endblock material %}

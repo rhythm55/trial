@@ -1,0 +1,61 @@
+{% extends 'headfoot.html' %}
+{% load static %}
+
+ {% block css %}
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+{% endblock css %}
+
+{% block material %}
+
+{% load index %}
+
+    <!-- heading -->
+    <section id="heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="horizontal-heading main-head text-center">
+                        <h5>blogs</h5>
+                        <div class="title-underline"></div>
+                    </div>   
+                </div>
+                <div class="col-md-2 blog-left">
+                    <h4>Have a look on latest Blogs</h4>
+                        {% for blog in blogs|slice:":15" %}
+                            {% ifnotequal blog.id blogid%}
+                                <a href="{% url 'blogview' blog.id %}">{{blog.title}}</a><br>
+                            {% endifnotequal %}
+                        {% endfor %}
+
+                </div>
+                <div class="col-md-1">
+                    <div class="vertical-line"></div>
+                </div>
+                <div class="col-md-9 blog-right">
+
+                       {% for blog in blogs %}
+                            {% ifequal blog.id blogid|inte %}
+                            <div class="horizontal-heading text-center">
+                               <h5>{{blog.language}}   |   {{blog.pub_date_pretty}}</h5>
+                               <h2><strong>{{blog.title}}</strong></h2>
+                            </div>
+                            <div class="heading-underline"></div>
+
+                            <p>{{blog.content}}</p>
+                            {% endifequal %}
+                        {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+ {% block js %}
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/headfoot.js' %}"></script>
+
+    {% endblock js %}
+
+{% endblock material %}

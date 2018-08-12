@@ -1,0 +1,179 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: #212226;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+/*====================================================
+                        PARALLAX (Generic)
+======================================================*/
+
+.bg-parallax {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* =========================================
+        Vertical/Horizontal Headings
+============================================ */
+
+.vertical-heading h5 {
+    color: rgb(250,145,0);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    word-spacing: 9px;
+    display: inline-block;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: relative;
+    top: 60px;
+    left: -53px;
+    margin-right: 160px;
+}
+
+.vertical-heading h2 {
+    margin: 0 0 0 35px;
+}
+
+.horizontal-heading h2,
+.vertical-heading h2 {
+    font-size: 42px;
+    font-weight: 100;
+    line-height: 45px;
+}
+
+.vertical-heading,
+.horizontal-heading {
+    margin-bottom: 0px;
+}
+
+.horizontal-heading h5 {
+    font-size: 16px;
+    color: rgb(250,145,0);
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.horizontal-heading h2 {
+    margin: 0;
+}
+
+.title-underline {
+    width: 40px;
+    height: 3px;
+    background-color: rgb(250,145,0);
+    margin: 10px auto 30px auto;
+}
+/*============================================
+                    heading
+=========================================*/
+.itips{
+    margin-top: 28px;
+}
+.itips .title-underline{
+    margin-left: 0;
+    width: 300px;
+}
+.itips .icon {
+    font-size: 28px;
+    margin: 25px 0 0 0;
+    -webkit-transition: all 400ms linear;
+    transition: all 400ms linear;
+    color: black;
+}
+
+.itips .text{
+    padding-left: 0;
+    text-align: left;
+}
+
+.itips:hover .icon {
+    color: #DB6C00;
+    border-radius: 1px solid black;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+}
+
+.itips h5 {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgb(250,145,0);
+    margin: 17px 0 6px 0;
+}
+
+.itips:hover h5 {
+    color: #212226;
+}
+
+.itips h4 {
+    font-size: 20px;
+    margin: 0 0 5px 0;
+}
+
+.itips p {
+    line-height: normal;
+}
+
+#underline .title-underline{
+    width: 1000px;
+    background-color: black;
+}
+
+.bg{
+    background-image: url("../img/plan.jpg")
+}
+
+.plan-img{
+    border-image: url("../img/plan.jpg");
+    background-size: cover;
+}
+
+.content h4{
+    color: rgb(250,145,0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
